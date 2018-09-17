@@ -1,0 +1,14 @@
+version: '2'
+
+networks:
+  byfn:
+
+services:
+
+  orderer0.example.com:
+    extends:
+      file:   base/docker-compose-base.yaml
+      service: orderer0.example.com
+    container_name: orderer0.example.com
+    networks:
+      - byfn
