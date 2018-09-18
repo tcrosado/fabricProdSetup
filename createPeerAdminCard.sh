@@ -104,19 +104,41 @@ cat << EOF > DevServer_connection.json
         }
     },
     "orderers": {
-        "orderer.example.com": {
-            "url": "grpc://${HOST}:7050"
+        "orderer0.example.com": {
+            "url": "grpc://${HOST-1}:7050"
+        },
+        "orderer1.example.com": {
+            "url": "grpc://${HOST-2}:7050"
+        },
+        "orderer2.example.com": {
+            "url": "grpc://${HOST-3}:7050"
         }
     },
     "peers": {
         "peer0.org1.example.com": {
-            "url": "grpc://${HOST}:7051",
-            "eventUrl": "grpc://${HOST}:7053"
+            "url": "grpc://${HOST-0}:7051",
+            "eventUrl": "grpc://${HOST-0}:7053"
+        },
+        "peer1.org1.example.com": {
+            "url": "grpc://${HOST-1}:7051",
+            "eventUrl": "grpc://${HOST-1}:7053"
+        },
+        "peer2.org1.example.com": {
+            "url": "grpc://${HOST-2}:7051",
+            "eventUrl": "grpc://${HOST-2}:7053"
+        },
+        "peer3.org1.example.com": {
+            "url": "grpc://${HOST-3}:7051",
+            "eventUrl": "grpc://${HOST-3}:7053"
+        },
+        "peer4.org1.example.com": {
+            "url": "grpc://${HOST-4}:7051",
+            "eventUrl": "grpc://${HOST-4}:7053"
         }
     },
     "certificateAuthorities": {
         "ca.org1.example.com": {
-            "url": "http://${HOST}:7054",
+            "url": "http://${HOST-0}:7054",
             "caName": "ca.org1.example.com"
         }
     }
