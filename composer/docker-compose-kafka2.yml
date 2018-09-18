@@ -1,5 +1,10 @@
 version: '2'
 
+networks:
+  default:
+    external:
+      name: bcar-net
+
 services:
   kafka2.example.com:
     container_name: kafka2.example.com

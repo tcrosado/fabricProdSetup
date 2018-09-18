@@ -1,5 +1,10 @@
 version: '2'
 
+networks:
+  default:
+    external:
+      name: bcar-net
+
 services:
   peer2.org1.example.com:
     container_name: peer2.org1.example.com
