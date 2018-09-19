@@ -30,6 +30,7 @@ services:
         - ./:/etc/hyperledger/configtx
         - ./crypto-config/peerOrganizations/org1.example.com/peers/peer3.org1.example.com/msp:/etc/hyperledger/peer/msp
         - ./crypto-config/peerOrganizations/org1.example.com/users:/etc/hyperledger/msp/users
+        - /etc/hosts:/etc/hosts
     depends_on:
       - couchdb
 

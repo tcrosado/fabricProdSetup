@@ -17,7 +17,8 @@ services:
       - KAFKA_MIN_INSYNC_REPLICAS=2
       - KAFKA_DEFAULT_REPLICATION_FACTOR=3
       - KAFKA_ZOOKEEPER_CONNECT=zookeeper0.example.com:2181,zookeeper1.example.com:2181,zookeeper2.example.com:2181
-    
+    volumes:
+      - /etc/hosts:/etc/hosts
     environment:
       - KAFKA_BROKER_ID=0
     ports:
