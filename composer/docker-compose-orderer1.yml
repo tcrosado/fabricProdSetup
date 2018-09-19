@@ -3,7 +3,7 @@ version: '2'
 networks:
   default:
     external:
-      name: bcar-net
+      name: host
 
 services:
   orderer1.example.com:
