@@ -36,20 +36,20 @@ export FABRIC_CFG_PATH=$PWD
 configtxgen -profile ComposerOrdererGenesis -outputBlock ./composer-genesis.block
 configtxgen -profile ComposerChannel -outputCreateChannelTx ./composer-channel.tx -channelID composerchannel
 
-echo $PEER0 >> /etc/hosts
-echo $PEER1 >> /etc/hosts
-echo $PEER2 >> /etc/hosts
-echo $PEER3 >> /etc/hosts
-echo $ORDERER0 >> /etc/hosts
-echo $ORDERER1 >> /etc/hosts
-echo $ORDERER2 >> /etc/hosts
-echo $ZKEEP0 >> /etc/hosts
-echo $ZKEEP1 >> /etc/hosts
-echo $ZKEEP2 >> /etc/hosts
-echo $KAFKA0 >> /etc/hosts
-echo $KAFKA1 >> /etc/hosts
-echo $KAFKA2 >> /etc/hosts
-echo $KAFKA3 >> /etc/hosts
+sudo echo $PEER0 >> /etc/hosts
+sudo echo $PEER1 >> /etc/hosts
+sudo echo $PEER2 >> /etc/hosts
+sudo echo $PEER3 >> /etc/hosts
+sudo echo $ORDERER0 >> /etc/hosts
+sudo echo $ORDERER1 >> /etc/hosts
+sudo echo $ORDERER2 >> /etc/hosts
+sudo echo $ZKEEP0 >> /etc/hosts
+sudo echo $ZKEEP1 >> /etc/hosts
+sudo echo $ZKEEP2 >> /etc/hosts
+sudo echo $KAFKA0 >> /etc/hosts
+sudo echo $KAFKA1 >> /etc/hosts
+sudo echo $KAFKA2 >> /etc/hosts
+sudo echo $KAFKA3 >> /etc/hosts
 
 tar cf - ./composer-genesis.block | nc $HOST0 1010
 tar cf - ./composer-channel.tx | nc $HOST0 1010
